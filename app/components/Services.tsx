@@ -71,7 +71,7 @@ export default function ServicesPage() {
        <div className="relative w-full h-80 rounded-md overflow-hidden">
 
   <video
-    src="/Ad.mp4"     // put your video inside /public
+    src="https://res.cloudinary.com/davlyosj1/video/upload/v1772779534/Ad_qc2mux.mp4"     // put your video inside /public
     autoPlay
     loop
     muted

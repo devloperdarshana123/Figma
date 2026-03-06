@@ -11,16 +11,16 @@ const categories = [
 ];
 
 const items = [
-  { src: "/weeding.mp4", tag: "Wedding" },
-  { src: "/Music.mp4", tag: "Music Video" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777971/weeding_fecvk5.mp4", tag: "Wedding" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777955/Music_eibsm8.mp4", tag: "Music Video" },
   { src: "/Container3.png", tag: "Corporate" },
-  { src: "/Teaser.mp4", tag: "Documentary" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777980/Teaser_rrk5fp.mov", tag: "Documentary" },
   { src: "/Container4.png", tag: "Photography" },
   { src: "/Adver.mp4", tag: "Advertising" },
   { src: "/prof1.png", tag: "Photography" },
   { src: "/Event.mp4", tag: "Event Shoot" },
   { src: "/pic.jpg", tag: "Photography" },
-  { src: "/BTS.mp4", tag: "BTS" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777928/BTS_nm2zzd.mp4", tag: "BTS" },
   { src: "/Container.png", tag: "Photoshoot" },
   { src: "/hero.mp4", tag: "Advertising" },
 ];
@@ -60,7 +60,7 @@ export default function PortfolioPage() {
       {/* GRID */}
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {items.map((item, i) => {
-    const isVideo = item.src.endsWith(".mp4");
+   const isVideo = item.src.endsWith(".mp4") || item.src.endsWith(".mov");
 
     return (
       <div
@@ -68,18 +68,22 @@ export default function PortfolioPage() {
         className="relative h-65 rounded-xl overflow-hidden group"
       >
         {/* MEDIA */}
-        {isVideo ? (
-          <video
-            src={item.src}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover
-                       group-hover:scale-105 transition duration-500"
-          />
-        ) : (
+      {isVideo ? (
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="metadata"
+    className="absolute inset-0 w-full h-full object-cover
+               group-hover:scale-105 transition duration-500"
+  >
+    <source
+      src={item.src}
+      type={item.src.endsWith(".mov") ? "video/quicktime" : "video/mp4"}
+    />
+  </video>
+) : (
           <Image
             src={item.src}
             alt={item.tag}
