@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/hero.mp4"
+        src="https://res.cloudinary.com/davlyosj1/video/upload/v1772777910/hero_umjlne.mp4"
         autoPlay
         loop
         muted
