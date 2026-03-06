@@ -24,7 +24,7 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
         <div className="relative w-full h-90 rounded-xl overflow-hidden">
           <Image
-            src="/story.jpg"
+            src="https://res.cloudinary.com/davlyosj1/image/upload/v1772783392/story_pagpdd.jpg"
             alt="Our Story"
             fill
             className="object-cover"

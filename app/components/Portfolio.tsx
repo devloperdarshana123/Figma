@@ -22,7 +22,7 @@ const items = [
   { src: "/pic.jpg", tag: "Photography" },
   { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777928/BTS_nm2zzd.mp4", tag: "BTS" },
   { src: "/Container.png", tag: "Photoshoot" },
-  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777910/hero_umjlne.mp4", tag: "Advertising" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772779150/MBA_ori9m0.mp4", tag: "Advertising" },
 ];
 
 
