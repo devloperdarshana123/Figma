@@ -1,3 +1,4 @@
+import React from "react";
 import { BsGrid } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi2";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -7,7 +8,7 @@ import { FaCamera, FaVideo, FaFilm, FaPlay } from "react-icons/fa";
 export default function Stats() {
   return (
     <>
-    <section className="w-full bg-gradient-to-b from-[#0b0b0b] to-black py-16">
+    <section className="w-full bg-linear-to-b from-[#0b0b0b] to-black py-16">
       <div className="max-w-6xl mx-auto grid grid-cols-3 text-center text-white">
 
         {/* Projects */}
@@ -62,7 +63,7 @@ export default function Stats() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 px-6">
 
           {/* CARD 1 — IMAGE */}
-          <div className="relative rounded-xl overflow-hidden group h-[320px]">
+          <div className="relative rounded-xl overflow-hidden group h-80">
             <Image
               src="/prof.jpg"     // image in public folder
               alt="Professional Photoshoots"
@@ -77,7 +78,7 @@ export default function Stats() {
               <h3 className="text-yellow-500 font-semibold">
                 Professional Photoshoots
               </h3>
-              <p className="text-xs text-gray-300 max-w-[200px]">
+              <p className="text-xs text-gray-300 max-w-50">
                 Capture your special day with cinematic excellence.
               </p>
             </div>
@@ -120,7 +121,7 @@ export default function Stats() {
 
       </section>
       {/* ================= TEAM SECTION ================= */}
-<section className="bg-gradient-to-b from-black to-[#0b0b0b] py-28 text-white">
+<section className="bg-linear-to-b from-black to-[#0b0b0b] py-28 text-white">
 
   {/* Heading */}
   <div className="text-center mb-20">
@@ -136,7 +137,7 @@ export default function Stats() {
   <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6">
 
     {/* Member 1 */}
-    <div className="bg-gradient-to-b from-[#141414] to-[#0b0b0b] 
+    <div className="bg-linear-to-b from-[#141414] to-[#0b0b0b] 
                     border border-[#1f1f1f] rounded-xl p-10 text-center">
 
       <div className="flex justify-center mb-6">
@@ -161,7 +162,7 @@ export default function Stats() {
     </div>
 
     {/* Member 2 */}
-    <div className="bg-gradient-to-b from-[#141414] to-[#0b0b0b] 
+    <div className="bg-linear-to-b from-[#141414] to-[#0b0b0b] 
                     border border-[#1f1f1f] rounded-xl p-10 text-center">
 
       <div className="flex justify-center mb-6">
@@ -204,7 +205,7 @@ export default function Stats() {
 <section className="relative py-28 bg-black overflow-hidden">
 
   {/* Background Glow */}
-  <div className="absolute inset-0 bg-gradient-to-r 
+  <div className="absolute inset-0 bg-linear-to-r 
                   from-[#2a1a00] via-black to-[#2a1a00] opacity-90" />
 
  <div className="relative z-10 max-w-5xl mx-auto px-6 text-center overflow-visible">
@@ -217,7 +218,7 @@ export default function Stats() {
       font-semibold
       leading-tight
       whitespace-normal
-      break-words
+      wrap-break-words
       text-white
     "
   >
@@ -254,10 +255,10 @@ function VideoCard({
   src: string;
   title: string;
   desc: string;
-  icon: JSX.Element;
+ icon: React.ReactNode;
 }) {
   return (
-    <div className="relative rounded-xl overflow-hidden group h-[320px]">
+    <div className="relative rounded-xl overflow-hidden group h-80">
 
       <video
         src={src}
@@ -273,7 +274,7 @@ function VideoCard({
       <div className="absolute bottom-5 left-5 z-10">
         <div className="text-yellow-500 text-xl mb-2">{icon}</div>
         <h3 className="text-yellow-500 font-semibold">{title}</h3>
-        <p className="text-xs text-gray-300 max-w-[200px]">{desc}</p>
+        <p className="text-xs text-gray-300 max-w-50">{desc}</p>
       </div>
     </div>
   );
