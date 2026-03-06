@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Navbar() {
   return (
    <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b border-yellow-500">
-  <div className="max-w-7xl mx-auto flex items-center justify-between px-10 h-[100px] text-white">
+  <div className="max-w-7xl mx-auto flex items-center justify-between px-10 h-25 text-white">
 
     {/* Logo */}
     <Image
@@ -12,7 +12,7 @@ export default function Navbar() {
       width={300}
       height={150}
       priority
-      className="object-contain h-full w-auto max-h-[90px] drop-shadow-lg"
+      className="object-contain h-full w-auto max-h-22.5 drop-shadow-lg"
     />
 
 

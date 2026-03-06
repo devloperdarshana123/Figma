@@ -1,3 +1,5 @@
+
+import React from "react";
 import Navbar from "../app/components/Navbar";
 import Footer from "../app/components/Footer";
 import "./globals.css";
@@ -10,7 +12,7 @@ const playfair = Playfair_Display({
 });
 
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`bg-black ${playfair.variable}`}>

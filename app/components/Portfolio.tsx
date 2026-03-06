@@ -65,7 +65,7 @@ export default function PortfolioPage() {
     return (
       <div
         key={i}
-        className="relative h-[260px] rounded-xl overflow-hidden group"
+        className="relative h-65 rounded-xl overflow-hidden group"
       >
         {/* MEDIA */}
         {isVideo ? (
@@ -102,7 +102,7 @@ export default function PortfolioPage() {
 <div className="mt-32 py-24 text-center relative overflow-hidden">
 
   {/* Background Glow */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#3a2600] via-black to-[#3a2600] opacity-90"></div>
+  <div className="absolute inset-0 bg-linear-to-r from-[#3a2600] via-black to-[#3a2600] opacity-90"></div>
 
   <div className="relative z-10 max-w-3xl mx-auto px-6">
     <h2 className="text-4xl md:text-5xl font-semibold mb-6">

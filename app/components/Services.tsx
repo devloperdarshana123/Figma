@@ -68,7 +68,7 @@ export default function ServicesPage() {
           </button>
         </div>
 
-       <div className="relative w-full h-[320px] rounded-md overflow-hidden">
+       <div className="relative w-full h-80 rounded-md overflow-hidden">
 
   <video
     src="/Ad.mp4"     // put your video inside /public
@@ -86,7 +86,7 @@ export default function ServicesPage() {
 
       {/* SERVICE 2 */}
       <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-        <div className="relative w-full h-[320px] rounded-md overflow-hidden">
+        <div className="relative w-full h-80 rounded-md overflow-hidden">
           <Image src="/pic.jpg" alt="Photography" fill className="object-cover" />
         </div>
 
@@ -173,14 +173,14 @@ export default function ServicesPage() {
           </button>
         </div>
 
-        <div className="relative w-full h-[320px] rounded-md overflow-hidden">
+        <div className="relative w-full h-80 rounded-md overflow-hidden">
           <Image src="/UI.png" alt="UI UX" fill className="object-cover" />
         </div>
       </div>
 
       {/* SERVICE 4 */}
       <div className="grid md:grid-cols-2 gap-16 items-center mb-40">
-        <div className="relative w-full h-[320px] rounded-md overflow-hidden">
+        <div className="relative w-full h-80 rounded-md overflow-hidden">
           <Image src="/per.png" alt="Post Production" fill className="object-cover" />
         </div>
 
@@ -302,7 +302,7 @@ export default function ServicesPage() {
     </div>
   ))}
 </div>
-<div className="mt-32 py-24 text-center bg-gradient-to-b from-black to-[#0b0b0b]">
+<div className="mt-32 py-24 text-center bg-linear-to-b from-black to-[#0b0b0b]">
   <h2 className="text-4xl md:text-5xl font-semibold mb-6">
     Let&apos;s Create Something{" "}
     <span className="text-yellow-500">Amazing</span>

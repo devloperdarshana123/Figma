@@ -25,7 +25,7 @@ export default function Hero() {
     width={600}
     height={450}
     priority
-    className="object-contain drop-shadow-lg max-w-[95%] max-h-[320px] h-auto"
+    className="object-contain drop-shadow-lg max-w-[95%] max-h-80 h-auto"
   />
 
  

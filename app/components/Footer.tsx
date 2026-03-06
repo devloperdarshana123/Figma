@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#0b0b0b] to-black text-gray-400 pt-20">
+    <footer className="bg-linear-to-b from-[#0b0b0b] to-black text-gray-400 pt-20">
       <div className="max-w-7xl mx-auto px-10">
 
         {/* Top Grid */}
@@ -26,7 +26,7 @@ export default function Footer() {
          width={300}
          height={150}
          priority
-         className="object-contain h-full w-auto max-h-[90px] drop-shadow-lg"
+         className="object-contain h-full w-auto max-h-22.5 drop-shadow-lg"
        />
             <h2 className="text-yellow-500 text-lg font-semibold mb-4">
               Pahadi Bhula
