@@ -86,7 +86,7 @@ export default function Stats() {
 
           {/* CARD 2 — VIDEO */}
           <VideoCard
-            src="/Event.mp4"
+            src="https://res.cloudinary.com/davlyosj1/video/upload/v1772777894/Event_wt5aud.mp4"
             title="Event Shoot"
             desc="Bring your music to life with stunning visuals."
             icon={<FaVideo />}
@@ -94,7 +94,7 @@ export default function Stats() {
 
           {/* CARD 3 — VIDEO */}
           <VideoCard
-            src="/MBA.mp4"
+            src="https://res.cloudinary.com/davlyosj1/video/upload/v1772779150/MBA_ori9m0.mp4"
             title="Corporate Films"
             desc="Professional storytelling for your brand."
             icon={<FaFilm />}
@@ -102,7 +102,7 @@ export default function Stats() {
 
           {/* CARD 4 — VIDEO */}
           <VideoCard
-            src="/doc.mp4"
+            src="https://res.cloudinary.com/davlyosj1/video/upload/v1772777989/doc_glq8jn.mp4"
             title="Documentary"
             desc="Authentic stories from the heart of mountains."
             icon={<FaPlay />}
