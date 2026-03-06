@@ -8,38 +8,59 @@ import {
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactPage() {
   const formRef = useRef<HTMLFormElement>(null);
 
- const sendEmail = (e: React.FormEvent) => {
-  e.preventDefault();
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
 
-  if (!formRef.current) return;
+    if (!formRef.current) return;
 
-  emailjs
-    .sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-      formRef.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    )
-    .then(() => {
-      alert("Message sent successfully ✅");
-      formRef.current?.reset();
-    })
-    .catch((error) => {
-      alert("Failed to send ❌ " + error.text);
-    });
-};
-
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(() => {
+        toast.success("Message sent successfully! ✅");
+        formRef.current?.reset();
+      })
+      .catch((error) => {
+        toast.error("Failed to send: " + error.text);
+      });
+  };
 
   return (
     <section id="contact" className="bg-black text-white">
 
+      {/* TOAST CONTAINER */}
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          success: {
+            style: {
+              background: "#1a1a1a",
+              color: "#fff",
+              border: "1px solid #EAB308",
+            },
+          },
+          error: {
+            style: {
+              background: "#1a1a1a",
+              color: "#fff",
+              border: "1px solid #ef4444",
+            },
+          },
+        }}
+      />
+
       {/* HEADER */}
       <div
-        className="w-full bg-gradient-to-b from-[#1b1b1b] to-[#0a0a0a]
+        className="w-full bg-linear-to-b from-[#1b1b1b] to-[#0a0a0a]
                    flex items-center justify-center"
         style={{ height: "260px" }}
       >
@@ -47,7 +68,7 @@ export default function ContactPage() {
           <h1 className="text-[42px] font-semibold mb-4 tracking-tight">
             Get in <span className="text-yellow-500">Touch</span>
           </h1>
-          <p className="text-[13px] text-gray-400 max-w-[640px] mx-auto leading-relaxed">
+          <p className="text-[13px] text-gray-400 max-w-160 mx-auto leading-relaxed">
             Ready to start your project? Have questions? We&apos;d love to hear from you.
           </p>
         </div>
@@ -71,7 +92,7 @@ export default function ContactPage() {
         </div>
 
         {/* RIGHT FORM */}
-        <div className="bg-gradient-to-b from-[#141414] to-[#0b0b0b] border border-[#1f1f1f] rounded-xl p-10">
+        <div className="bg-linear-to-b from-[#141414] to-[#0b0b0b] border border-[#1f1f1f] rounded-xl p-10">
           <h2 className="text-2xl font-semibold mb-8">
             Send us a <span className="text-yellow-500">Message</span>
           </h2>
@@ -115,7 +136,7 @@ export default function ContactPage() {
 
 function InfoCard({ icon, title, text, sub }: any) {
   return (
-    <div className="bg-gradient-to-b from-[#141414] to-[#0b0b0b] border border-[#1f1f1f] rounded-xl p-6 flex gap-4">
+    <div className="bg-linear-to-b from-[#141414] to-[#0b0b0b] border border-[#1f1f1f] rounded-xl p-6 flex gap-4">
       <div className="w-10 h-10 flex items-center justify-center rounded-md bg-[#2a1d05] text-yellow-500">
         {icon}
       </div>
