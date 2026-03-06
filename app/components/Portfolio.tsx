@@ -16,13 +16,13 @@ const items = [
   { src: "/Container3.png", tag: "Corporate" },
   { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777980/Teaser_rrk5fp.mov", tag: "Documentary" },
   { src: "/Container4.png", tag: "Photography" },
-  { src: "/Adver.mp4", tag: "Advertising" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777880/Adver_worzni.mp4", tag: "Advertising" },
   { src: "/prof1.png", tag: "Photography" },
-  { src: "/Event.mp4", tag: "Event Shoot" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772781869/Event_qcm0o3.mp4", tag: "Event Shoot" },
   { src: "/pic.jpg", tag: "Photography" },
   { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777928/BTS_nm2zzd.mp4", tag: "BTS" },
   { src: "/Container.png", tag: "Photoshoot" },
-  { src: "/hero.mp4", tag: "Advertising" },
+  { src: "https://res.cloudinary.com/davlyosj1/video/upload/v1772777910/hero_umjlne.mp4", tag: "Advertising" },
 ];
 
 
